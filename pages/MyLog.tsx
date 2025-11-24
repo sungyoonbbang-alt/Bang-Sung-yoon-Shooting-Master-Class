@@ -35,7 +35,7 @@ const MyLog: React.FC = () => {
         {/* User Stats Summary */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           <div className="bg-white p-6 rounded-xl shadow-sm border-l-4 border-primary flex items-center">
-            <div className="p-3 bg-red-50 rounded-full mr-4">
+            <div className="p-3 bg-purple-50 rounded-full mr-4">
               <Target className="text-primary w-8 h-8" />
             </div>
             <div>
@@ -134,9 +134,9 @@ const MyLog: React.FC = () => {
                   <Line 
                     type="monotone" 
                     dataKey="value" 
-                    stroke="#D03737" 
+                    stroke="#8B5CF6" 
                     strokeWidth={3} 
-                    dot={{ r: 6, fill: '#D03737', strokeWidth: 2, stroke: '#fff' }} 
+                    dot={{ r: 6, fill: '#8B5CF6', strokeWidth: 2, stroke: '#fff' }} 
                     activeDot={{ r: 8 }}
                   />
                 </LineChart>

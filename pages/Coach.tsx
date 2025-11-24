@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Quote, User, Award, BookOpen, Star, Trophy, Calendar, Youtube, MessageCircle } from 'lucide-react';
 import Button from '../components/Button';
@@ -10,7 +11,7 @@ const CAREER_LIST = [
   { year: "2008", title: "득점상 & 3점슛상 2관왕", desc: "SK텔레콤 T프로농구 스포츠토토 한국농구대상" },
   { year: "2007", title: "KBL 정규리그 베스트5", desc: "현대모비스 프로농구 / 올스타전 출전 / 한중 올스타" },
   { year: "2006", title: "KBL 신인상 수상", desc: "KCC 프로농구 정규리그 / 도하 아시안게임 국가대표" },
-  { year: "2006.08", title: "월드바스켓볼챌린지 국가대표", desc: "대한민국 국가대표" },
+  { year: "2006.08", "title": "월드바스켓볼챌린지 국가대표", desc: "대한민국 국가대표" },
   { year: "2005.11 ~ 2008", title: "서울 SK 나이츠", desc: "KBL 프로 선수 활동" },
   { year: "2004 ~ 2005", title: "로어노크 대즐", desc: "NBDL (현 G-League) 한국인 최초 진출" },
   { year: "2003", title: "대구유니버시아드 국가대표", desc: "제22회 대구유니버시아드 대회" },
@@ -26,15 +27,21 @@ const Coach: React.FC = () => {
       <div className="bg-dark text-white pt-20 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="w-full md:w-1/3">
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/50 relative">
+            <div className="w-full md:w-1/3 flex justify-center">
+              {/* Profile Image Container */}
+              <div className="relative w-full max-w-[300px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/50 group bg-white">
                 <img 
-                  src="https://images.unsplash.com/photo-1544919982-b61976f0ba43?auto=format&fit=crop&q=80&w=800" 
-                  alt="Coach Bang" 
-                  className="w-full h-full object-cover"
+                  src="/coach_profile.jpg" 
+                  alt="Coach Bang Profile" 
+                  className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = "https://source.unsplash.com/random/300x400/?basketball,hoop"; // Fallback to a clear basketball image if local file not found
+                  }}
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
-                  <h2 className="text-3xl font-bold">방성윤</h2>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/60 to-transparent p-6">
+                  <h2 className="text-3xl font-bold text-white">방성윤</h2>
                   <p className="text-secondary font-medium">Head Coach & Founder</p>
                 </div>
               </div>
@@ -96,7 +103,7 @@ const Coach: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-6 text-primary">
+              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-6 text-primary">
                 <BookOpen className="w-6 h-6" />
               </div>
               <h3 className="font-bold text-xl mb-3">TDR Rhythm</h3>

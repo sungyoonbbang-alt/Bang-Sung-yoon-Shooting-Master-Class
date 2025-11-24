@@ -46,7 +46,7 @@ const Forum: React.FC = () => {
               <ul className="space-y-2">
                 {['전체보기', '슛 클리닉 Q&A', '폼 평가 (영상)', '성장 자랑', '자유 게시판'].map((cat, idx) => (
                   <li key={idx}>
-                    <button className={`w-full text-left px-4 py-2 rounded-lg transition-colors ${idx === 0 ? 'bg-red-50 text-primary font-bold' : 'text-gray-600 hover:bg-gray-50'}`}>
+                    <button className={`w-full text-left px-4 py-2 rounded-lg transition-colors ${idx === 0 ? 'bg-purple-50 text-primary font-bold' : 'text-gray-600 hover:bg-gray-50'}`}>
                       {cat}
                     </button>
                   </li>
@@ -54,7 +54,7 @@ const Forum: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-primary to-red-800 rounded-xl shadow-lg p-6 text-white">
+            <div className="bg-gradient-to-br from-primary to-purple-800 rounded-xl shadow-lg p-6 text-white">
               <h3 className="font-bold text-lg mb-2">오늘의 베스트 슈터</h3>
               <p className="text-sm opacity-90 mb-4">이번 주 가장 많은 성장을 기록한 회원은?</p>
               <div className="flex items-center gap-3 mb-4">

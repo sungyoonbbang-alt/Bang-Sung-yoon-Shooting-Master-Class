@@ -126,7 +126,7 @@ const Clinic: React.FC = () => {
                   <div className="absolute -left-3 top-0 bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm">1</div>
                   <div className="flex justify-between items-center mb-6">
                      <h3 className="text-2xl font-bold text-gray-900">기본 자세 (Triple Threat)</h3>
-                     <span className="flex items-center gap-1 text-xs font-bold text-primary bg-red-50 px-3 py-1 rounded-full border border-red-100 cursor-pointer">
+                     <span className="flex items-center gap-1 text-xs font-bold text-primary bg-purple-50 px-3 py-1 rounded-full border border-purple-100 cursor-pointer">
                         <PlayCircle className="w-3 h-3" /> 영상 QR
                      </span>
                   </div>
@@ -161,7 +161,7 @@ const Clinic: React.FC = () => {
                     <li>5. 최대한 몸과 가까이 붙여서 딜리버리한다 (수직 상승).</li>
                     <li>6. 시작 위치가 이마와 가까울수록 슈팅 타이밍이 빨라진다.</li>
                   </ul>
-                  <div className="bg-red-50 p-4 rounded-xl border border-red-100 text-sm">
+                  <div className="bg-purple-50 p-4 rounded-xl border border-purple-100 text-sm">
                     <strong className="text-primary flex items-center gap-2 mb-2"><AlertTriangle className="w-4 h-4"/> 주의할 점</strong>
                     <p className="text-gray-700">
                       보통 팔을 몸 쪽으로 당겨서 딜리버리 하려다 세트포인트가 흔들립니다. 
@@ -266,12 +266,12 @@ const Clinic: React.FC = () => {
                     <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-white"></div>
                     <div className="flex justify-between items-center mb-2">
                       <h3 className="text-xl font-bold text-primary">2. Delivery (연결)</h3>
-                      <span className="text-xs font-bold bg-red-50 text-primary px-2 py-1 rounded">리듬: 탁 (상승)</span>
+                      <span className="text-xs font-bold bg-purple-50 text-primary px-2 py-1 rounded">리듬: 탁 (상승)</span>
                     </div>
                     <p className="text-gray-600 mb-3">
                       공을 <span className="font-bold">세트포인트(이마 앞)</span>로 직선 이동시키는 과정입니다. 하체의 힘이 상체로 전달됩니다.
                     </p>
-                    <div className="bg-red-50 p-4 rounded-lg border border-red-100">
+                    <div className="bg-purple-50 p-4 rounded-lg border border-purple-100">
                       <h4 className="font-bold text-primary text-sm mb-2 flex items-center gap-2">
                         <Target className="w-4 h-4" /> 핵심: 세트포인트 (Set Point)
                       </h4>
@@ -303,9 +303,9 @@ const Clinic: React.FC = () => {
               <div className="sticky top-40 space-y-6">
                 <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-2xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1518407613690-d9fc990e795f?auto=format&fit=crop&q=80&w=800" 
-                    alt="Shooting Form" 
-                    className="w-full h-64 object-cover opacity-80"
+                    src="https://images.unsplash.com/photo-1628779238951-be2c9f2a0791?auto=format&fit=crop&q=80&w=800" 
+                    alt="Shooting Form Focus" 
+                    className="w-full h-64 object-cover opacity-90"
                   />
                   <div className="p-6">
                     <h3 className="text-white font-bold text-xl mb-2">Coach's Rhythm Tip</h3>
@@ -475,7 +475,7 @@ const Clinic: React.FC = () => {
                   <p className="text-gray-600 mb-6 text-sm">
                     "꾹-탁-슛" 구호에 맞춰 하체와 상체의 연결을 연습합니다.
                   </p>
-                  <div className="bg-red-50 rounded-lg p-4 space-y-2 text-sm text-gray-700">
+                  <div className="bg-purple-50 rounded-lg p-4 space-y-2 text-sm text-gray-700">
                      <div className="flex justify-between"><span>거리</span> <strong>자유투 라인</strong></div>
                     <div className="flex justify-between"><span>반복</span> <strong>10회 x 3세트</strong></div>
                     <div className="flex justify-between"><span>도구</span> <strong>메트로놈 (70BPM)</strong></div>
@@ -722,7 +722,7 @@ const Clinic: React.FC = () => {
                  <div className="bg-primary text-white p-6 relative">
                    <div className="absolute top-4 right-4 text-xs font-bold bg-white/20 px-2 py-1 rounded">6 Weeks</div>
                    <h3 className="text-xl font-bold mb-1">Phase 2: 실전 기술</h3>
-                   <p className="text-red-100 text-sm">다양한 상황에서 사용할 무기를 개발한다</p>
+                   <p className="text-purple-100 text-sm">다양한 상황에서 사용할 무기를 개발한다</p>
                  </div>
                  <div className="p-6 space-y-6">
                    <div>
@@ -821,7 +821,7 @@ const Clinic: React.FC = () => {
                    </div>
                    <div className="flex items-center gap-4">
                      <div className="w-16 text-sm font-bold text-gray-500">60분</div>
-                     <div className="flex-1 bg-red-50 p-3 rounded-lg border-l-4 border-primary">
+                     <div className="flex-1 bg-purple-50 p-3 rounded-lg border-l-4 border-primary">
                        <div className="font-bold text-primary">메인 훈련</div>
                        <div className="text-xs text-gray-500">해당 주차 핵심 기술 습득 및 반복</div>
                      </div>

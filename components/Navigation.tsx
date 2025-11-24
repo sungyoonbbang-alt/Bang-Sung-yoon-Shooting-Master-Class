@@ -69,7 +69,7 @@ const Navigation: React.FC = () => {
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
                   `block px-3 py-2 rounded-md text-base font-medium ${
-                    isActive ? 'text-primary bg-red-50' : 'text-gray-700 hover:text-primary hover:bg-gray-50'
+                    isActive ? 'text-primary bg-purple-50' : 'text-gray-700 hover:text-primary hover:bg-gray-50'
                   }`
                 }
               >
