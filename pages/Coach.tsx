@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Quote, User, Award, BookOpen, Star, Trophy, Calendar, Youtube, MessageCircle } from 'lucide-react';
 import Button from '../components/Button';
 
@@ -21,6 +21,9 @@ const CAREER_LIST = [
 ];
 
 const Coach: React.FC = () => {
+  const [coachProfileSrc, setCoachProfileSrc] = useState('/coach_profile.jpg');
+  const defaultCoachFallback = "https://source.unsplash.com/random/300x400/?basketball,hoop";
+
   return (
     <div className="pb-20">
       {/* Header Profile */}
@@ -31,14 +34,10 @@ const Coach: React.FC = () => {
               {/* Profile Image Container */}
               <div className="relative w-full max-w-[300px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/50 group bg-white">
                 <img 
-                  src="/coach_profile.jpg" 
+                  src={coachProfileSrc}
                   alt="Coach Bang Profile" 
                   className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.onerror = null;
-                    target.src = "https://source.unsplash.com/random/300x400/?basketball,hoop"; // Fallback to a clear basketball image if local file not found
-                  }}
+                  onError={() => setCoachProfileSrc(defaultCoachFallback)}
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/60 to-transparent p-6">
                   <h2 className="text-3xl font-bold text-white">방성윤</h2>

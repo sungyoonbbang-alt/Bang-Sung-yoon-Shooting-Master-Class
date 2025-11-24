@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TrendingUp, MessageCircle, Trophy, Star } from 'lucide-react';
 import Button from '../components/Button';
@@ -6,20 +6,22 @@ import Button from '../components/Button';
 const Home: React.FC = () => {
   const navigate = useNavigate();
 
+  const [heroSrc, setHeroSrc] = useState('/home_visual.jpg');
+  const [solutionSrc, setSolutionSrc] = useState('/home_visual.jpg');
+  // Social Proof section's image is hardcoded to Unsplash, so no useState needed for it
+  const defaultHeroFallback = "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=1920";
+  const defaultSolutionFallback = "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=1200";
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/home_visual.jpg" 
+            src={heroSrc} 
             alt="Basketball Action" 
             className="w-full h-full object-cover object-center brightness-[0.85]"
-            onError={(e) => {
-              const target = e.target as HTMLImageElement;
-              target.onerror = null; // Prevent infinite loop
-              target.src = "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=1920";
-            }}
+            onError={() => setHeroSrc(defaultHeroFallback)}
           />
           {/* Gradient Overlay - Lighter opacity to show image better */}
           <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-purple-900/20 to-transparent mix-blend-multiply"></div>
@@ -64,14 +66,10 @@ const Home: React.FC = () => {
             {/* Image Container */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px] border-4 border-white ring-1 ring-gray-100">
               <img 
-                src="/home_visual.jpg" 
+                src={solutionSrc} 
                 alt="Basketball Hoop Action" 
                 className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.onerror = null;
-                  target.src = "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=1200";
-                }}
+                onError={() => setSolutionSrc(defaultSolutionFallback)}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60"></div>
               <div className="absolute bottom-6 left-6 right-6 text-white">
